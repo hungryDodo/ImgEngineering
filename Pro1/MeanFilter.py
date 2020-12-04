@@ -8,7 +8,6 @@
 # @Function: Perform the average filter using the integral graph algorithm.
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 def generate_integral_image(img):
@@ -68,7 +67,7 @@ def mean_filter_2d(int_img, ker_size=3):
 if __name__ == "__main__":
     image = cv2.imread("test.jpg", cv2.IMREAD_GRAYSCALE)
     image = cv2.resize(image, (image.shape[1] // 10, image.shape[0] // 10))
+    cv2.imwrite("image.jpg", image)
     integral_image = generate_integral_image(image)
     result = mean_filter_2d(integral_image, 5)
-    plt.imshow(result)
-    plt.show()
+    cv2.imwrite("result2.jpg", result)

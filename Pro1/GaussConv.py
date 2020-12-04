@@ -8,7 +8,6 @@
 # @Function: Build a 5x5 Gauss kernel and make Gauss convolution.
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 def generate_kernel(sigma, ker_size=3):
@@ -75,6 +74,6 @@ if __name__ == "__main__":
     kernel = generate_kernel(0.5, ker_size=5)
     image = cv2.imread("test.jpg", cv2.IMREAD_GRAYSCALE)
     image = cv2.resize(image, (image.shape[1] // 10, image.shape[0] // 10))
+    cv2.imwrite("image.jpg", image)
     result = gauss_conv_2d(kernel, image)
-    plt.imshow(result)
-    plt.show()
+    cv2.imwrite("result1.jpg", result)
