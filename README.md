@@ -7,8 +7,6 @@
 
 ## Pro 02
 
-1. 编写函数，评估Harris角点检测算法的旋转不变性。
-
 1. Write a function to evaluate the rotation invariance of Harris corner detection algorithm.
 
 ## Pro 03
